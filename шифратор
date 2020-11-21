@@ -1,0 +1,14 @@
+while True:
+    alphabet = "abcdefghijklmnopqrstuvwxyz:"
+    encrypt = input("Enter the word:")
+    key = int (input("Enter the key:"))
+    encrypt = encrypt.lower()
+    encrypted = ''
+    for letter in encrypt:
+        position = alphabet.find(letter)
+        position1 = position + key
+        if letter in alphabet:
+            encrypted = encrypted + alphabet[position1]
+        else:
+            encrypted = encrypted + letter
+    print("your code", encrypted)
